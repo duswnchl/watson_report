@@ -1,3 +1,6 @@
 [submodule "reveal"]
 	path = reveal
 	url = git@github.com:hakimel/reveal.js.git
+[submodule "plugins"]
+	path = plugins
+	url = git@github.com:rajgoel/reveal.js-plugins.git

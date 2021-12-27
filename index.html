@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>왓슨 2021 결산</title>
+        <link rel="stylesheet" href="./reveal/dist/reveal.css">
+        <link rel="stylesheet" href="./theme/custom.css">
+
+        <script src="./reveal/dist/reveal.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+        <script src="./plugins/chart/plugin.js"></script>
+	</head>
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>왓슨토론 2021년 결산</h1>
+				</section>
+
+				<section>
+					<h2>얼마나 참석했나</h2>
+                    <div style="height:480px">
+                        <canvas data-chart="line" data-chart-src="./data/data_attendee.csv">
+                        <!--
+                        {
+                            "data": {
+                                "datasets": [
+                                    {
+                                        "borderColor": "rgba(211,54,130,1.0)",
+                                        "pointRadius": 5,
+                                        "pointBackgroundColor": "rgba(211,54,130,1.0)"
+                                    }
+                                 ]
+                            }
+                        }
+                        -->
+                        </canvas>
+                    </div>
+				</section>
+
+				<section>
+					<h2>어떻게 평가했나</h2>
+                    <div style="height:480px">
+                        <canvas data-chart="doughnut" data-chart-src="./data/data_score.csv">
+                        <!--
+                        {
+                            "data": {
+                                "datasets": [
+                                    {
+                                        "backgroundColor": [ "rgba(155,191,224,1.0)", "rgba(198,214,143,1.0)", "rgba(232,160,154,1.0)", "rgba(251,226,159,1.0)" ]
+                                    }
+                                 ]
+                            }
+                        }
+                        -->
+                        </canvas>
+                    </div>
+				</section>
+
+				<section>
+					<h2>어느 나라 책을 읽었나</h2>
+                    <div style="height:480px">
+                        <canvas data-chart="bar" data-chart-src="./data/data_from.csv">
+                        <!--
+                        {
+                            "data": {
+                                "datasets": [
+                                    {
+                                        "backgroundColor": [ "rgba(96,80,220,0.5)", "rgba(213,45,183,0.5)", "rgba(255,46,126,0.5)", "rgba(255,107,69,0.5)", "rgba(255,171,5,0.5)" ]
+                                    }
+                                 ]
+                            }
+                        }
+                        -->
+                        </canvas>
+                    </div>
+				</section>
+
+			</div>
+		</div>
+
+        <script>
+            Reveal.initialize({
+                chart: {
+                    defaults: {
+                        color: "rgba(7,54,66,1.0)", // color of labels
+                        scale: {
+                            beginAtZero: true,
+                            ticks: { stepSize: 1 },
+                            grid: { color: "rgba(147,161,161,1.0)" } , // color of grid lines
+                        },
+                    },
+                },
+                plugins: [ RevealChart ],
+            });
+        </script>
+
+	</body>
+</html>
