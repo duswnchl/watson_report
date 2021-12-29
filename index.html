@@ -22,7 +22,7 @@
 
 				<section>
 					<h2>얼마나 참석했나</h2>
-                    <div style="height:480px">
+                    <div style="height:40vh">
                         <canvas data-chart="line" data-chart-src="./data/data_attendee.csv">
                         <!--
                         {
@@ -43,14 +43,16 @@
 
 				<section>
 					<h2>어떻게 평가했나</h2>
-                    <div style="height:480px">
+                    <div style="height:40vh">
                         <canvas data-chart="doughnut" data-chart-src="./data/data_score.csv">
                         <!--
                         {
                             "data": {
                                 "datasets": [
                                     {
-                                        "backgroundColor": [ "rgba(155,191,224,1.0)", "rgba(198,214,143,1.0)", "rgba(232,160,154,1.0)", "rgba(251,226,159,1.0)" ]
+                                        "backgroundColor": [
+                                            "rgba(155,191,224,1.0)", "rgba(198,214,143,1.0)", "rgba(232,160,154,1.0)", "rgba(251,226,159,1.0)"
+                                        ]
                                     }
                                  ]
                             }
@@ -62,16 +64,32 @@
 
 				<section>
 					<h2>어느 나라 책을 읽었나</h2>
-                    <div style="height:480px">
+                    <div style="height:40vh">
                         <canvas data-chart="bar" data-chart-src="./data/data_from.csv">
                         <!--
                         {
                             "data": {
                                 "datasets": [
                                     {
-                                        "backgroundColor": [ "rgba(96,80,220,0.5)", "rgba(213,45,183,0.5)", "rgba(255,46,126,0.5)", "rgba(255,107,69,0.5)", "rgba(255,171,5,0.5)" ]
+                                        "backgroundColor": [
+                                            "rgba(96,80,220,0.5)", "rgba(213,45,183,0.5)", "rgba(255,46,126,0.5)", "rgba(255,107,69,0.5)",
+                                            "rgba(255,171,5,0.5)"
+                                        ]
                                     }
                                  ]
+                            },
+                            "options": {
+                                "scales": {
+                                    "xAxes": {
+                                        "ticks": {
+                                            "mirror": true,
+                                            "font": {
+                                                "size": 50,
+                                                "family": "'Nanum Myeongjo', serif"
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                         -->
@@ -86,11 +104,10 @@
             Reveal.initialize({
                 chart: {
                     defaults: {
-                        color: "rgba(7,54,66,1.0)", // color of labels
                         scale: {
                             beginAtZero: true,
                             ticks: { stepSize: 1 },
-                            grid: { color: "rgba(147,161,161,1.0)" } , // color of grid lines
+                            grid: { color: "rgba(147,161,161,1.0)", borderDash: [8, 4] }, // color of grid lines
                         },
                     },
                 },
