@@ -17,11 +17,13 @@
 			<div class="slides">
 
 				<section>
-					<h1>왓슨토론 2021년 결산</h1>
+					<h1 class="r-fit-text">왓슨토론</h1>
+					<h1 class="r-fit-text">2021년 결산</h1>
 				</section>
 
 				<section>
-					<h2>얼마나 참석했나</h2>
+					<h2 class="r-fit-text">몇명이나 참석했나</h2>
+                    <p/><p/>
                     <div style="height:40vh">
                         <canvas data-chart="line" data-chart-src="./data/data_attendee.csv">
                         <!--
@@ -42,7 +44,8 @@
 				</section>
 
 				<section>
-					<h2>어떻게 평가했나</h2>
+					<h2 class="r-fit-text">어떻게 평가했나</h2>
+                    <p/><p/>
                     <div style="height:40vh">
                         <canvas data-chart="doughnut" data-chart-src="./data/data_score.csv">
                         <!--
@@ -55,7 +58,8 @@
                                         ]
                                     }
                                  ]
-                            }
+                            },
+                            "options": { "plugins": { "legend": { "display": true } } }
                         }
                         -->
                         </canvas>
@@ -63,7 +67,8 @@
 				</section>
 
 				<section>
-					<h2>어느 나라 책을 읽었나</h2>
+					<h2 class="r-fit-text">어느 나라 책을 읽었나</h2>
+                    <p/><p/>
                     <div style="height:40vh">
                         <canvas data-chart="bar" data-chart-src="./data/data_from.csv">
                         <!--
@@ -79,14 +84,12 @@
                                  ]
                             },
                             "options": {
+                                "indexAxis": "y",
                                 "scales": {
-                                    "xAxes": {
+                                    "yAxes": {
                                         "ticks": {
                                             "mirror": true,
-                                            "font": {
-                                                "size": 50,
-                                                "family": "'Nanum Myeongjo', serif"
-                                            }
+                                            "font": { "size": 40 }
                                         }
                                     }
                                 }
@@ -96,6 +99,45 @@
                         </canvas>
                     </div>
 				</section>
+
+                <section>
+                    <h2 class="r-fit-text">최고의 평점</h2>
+                    <h3 class="r-fit-text">이누가미 일족</h3>
+                    <div style="display: inline-flex;">
+                        <img src="http://image.yes24.com/momo/TopCate66/MidCate01/6501890.jpg" style="float:left; padding: 15px 15px 15px 15px; height:480px;"></img>
+                        <div>
+                            <h4>
+                                굉장히 일본스러운 막장극/
+                                난리났네 난리났어 확실히 할아버지가 더 매운 맛/
+                                뒤틀림/
+                                그것은 사헤가 유례없는 미소년이었다는 것이다/
+                                거짓과 진실의 대가
+                            </h4>
+                            <h3 style="color:red">평점 4.8 모리아티</h3>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="r-fit-text">최악의 평점</h2>
+                    <h3 class="r-fit-text">흑사관 살인사건</h3>
+                    <div style="display: inline-flex;">
+                        <img src="http://image.yes24.com/goods/85472555/XL" style="float:left; padding: 15px 15px 15px 15px; height:480px;"></img>
+                        <div>
+                            <h4>
+                                이걸 읽고 완벽히 이해했다면 허세요 재미있었다면 허풍이로다/
+                                내맘대로 추리극/
+                                (너만) 아는 말 대잔치/
+                                p.418 "노리미즈씨, 이 사건의 악령은, 바로 당신이요!"/
+                                p.303 "나는 말을 하면 할수록 점점 모르겠어." 읽을수록 모르겠다/
+                                p.623 "검사는 당황해서 사이비 역사가 노리미즈의 장광설을 막고는, 아직도 반신반의하는 태도로 노리미즈를 바라보았다."
+                                 읽으면서 가장 공감갔던 장면. 기서는 건드리는 게 아닌 것 같다./
+                                난 검사가 제일 불쌍!!! 나같음 절교함
+                            </h4>
+                            <h3 style="color:red">평점 1.0 레스트레이드</h3>
+                        </div>
+                    </div>
+                </section>
 
 			</div>
 		</div>
@@ -109,6 +151,8 @@
                             ticks: { stepSize: 1 },
                             grid: { color: "rgba(147,161,161,1.0)", borderDash: [8, 4] }, // color of grid lines
                         },
+                        plugins: { legend: { display: false } },
+                        font : { family: "'Nanum Myeongjo', serif", size: 25 }
                     },
                 },
                 plugins: [ RevealChart ],

@@ -16,6 +16,10 @@ html * {
   --r-background-color: #fdf6e3;
   --r-main-font: 'Nanum Myeongjo', serif;
   --r-heading-font: 'Nanum Myeongjo', serif;
+  --r-heading1-size: 3.77em;
+  --r-heading2-size: 2.11em;
+  --r-heading3-size: 1.55em;
+  --r-heading4-size: 1em;
 }
 
 .reveal-viewport {
@@ -53,18 +57,22 @@ html * {
 
 .reveal h1 {
   color: #CB4B19;
-  font-size: 2.5em;
+  font-size: var(--r-heading1-size);
   margin-bottom: 10px;
 }
 
 .reveal h2 {
-  font-size: 2.2em;
+  font-size: var(--r-heading2-size);
   color: #6C71C4;
 }
 
 .reveal h3 {
-  font-size: 1.2em;
+  font-size: var(--r-heading3-size);
   color: #32A198;
+}
+
+.reveal h4 {
+  font-size: var(--r-heading4-size);
 }
 
 .sate-background h2: {
